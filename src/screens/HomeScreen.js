@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 const HomeScreen = () => {
   return (
-    <div>HomeScreen</div>
-  )
-}
+    <div style={{marginTop: 100}}>
+      <h1>Home</h1>
+    </div>
+  );
+};
 
-export default HomeScreen
+export default HomeScreen;
