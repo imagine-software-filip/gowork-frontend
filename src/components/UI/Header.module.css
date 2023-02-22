@@ -1,0 +1,24 @@
+header {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.headerContainer {
+    background-color: #0091FF;
+    color: #fff;
+    font-weight: bold;
+    height: 60px;
+    padding: 5px 20px;
+    width: 90%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
