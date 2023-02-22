@@ -34,7 +34,6 @@ footer {
 
 .linkContainer:hover {
     color: #EDBD00;
-    font-size: 1.1rem;
     transition: 0.3s;
 }
 
@@ -55,7 +54,6 @@ footer {
 
     .linkContainer:hover {
         color: #EDBD00;
-        font-size: 0.8rem;
         transition: 0.3s;
     }
   }
