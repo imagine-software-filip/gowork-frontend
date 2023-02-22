@@ -1,0 +1,61 @@
+footer {
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    padding: 0;
+  }
+
+.footerContainer {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-around;
+    background-color: #0091FF;
+    font-weight: bold;
+    font-size: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 90%;
+    height: 60px;
+}
+
+.tabContainer {
+    width: 20%;
+}
+
+.linkContainer {
+    text-decoration: none;
+    color: #fff;
+}
+
+.linkContainer:hover {
+    color: #EDBD00;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+
+.tabText {
+    margin-top: 5px;
+}
+
+.tabIcon {
+    font-size: 25px;
+}
+
+
+@media screen and (max-width: 650px) {
+    .footerContainer {
+        font-size: 0.65rem;
+    }
+
+    .linkContainer:hover {
+        color: #EDBD00;
+        font-size: 0.8rem;
+        transition: 0.3s;
+    }
+  }
