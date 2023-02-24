@@ -17,8 +17,8 @@ footer {
     background-color: #0091FF;
     font-weight: bold;
     font-size: 1rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     width: 90%;
     height: 60px;
 }

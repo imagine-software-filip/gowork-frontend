@@ -5,7 +5,7 @@ const TempJobsScreen = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h3>Temp Jobs Screen</h3>
+        <h3 style={{marginLeft: 20}}>Temp Jobs Screen</h3>
       </div>
     </div>
   );
