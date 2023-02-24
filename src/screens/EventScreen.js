@@ -5,7 +5,7 @@ const EventScreen = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h3>Events</h3>
+        <h3 style={{marginLeft: 20}}>Events</h3>
       </div>
     </div>
   );
