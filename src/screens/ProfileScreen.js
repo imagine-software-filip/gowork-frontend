@@ -5,7 +5,7 @@ const ProfileScreen = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h3>Profile Screen</h3>
+        <h3 style={{marginLeft: 20}}>Profile Screen</h3>
       </div>
     </div>
   );

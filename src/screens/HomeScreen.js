@@ -6,7 +6,7 @@ const HomeScreen = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h3>Welcome back Andrew</h3>
+        <h3 style={{marginLeft: 20}}>Welcome back Andrew</h3>
       </div>
     </div>
   );

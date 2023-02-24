@@ -5,7 +5,7 @@ const FreeLancingScreen = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
-        <h3>Free Lancing</h3>
+        <h3 style={{marginLeft: 20}}>Free Lancing</h3>
       </div>
     </div>
   );
