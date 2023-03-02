@@ -15,3 +15,63 @@
     background-color: #0091FF;
     color: #fff;
 }
+
+.searchBarContainer {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    width: 95%;
+    padding: 10px 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+}
+
+.searchButton {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px 30px;
+    border: none;
+}
+
+.searchButton:hover {
+    background-color: #EDBD00;
+    transition: 0.3s;
+}
+
+.searchButton:active {
+    background-color: #cba201;
+    transition: 0.3s;
+}
+
+.filterContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.catButton {
+    padding: 2px 12px;
+    border-radius: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.catButton:hover {
+    background-color: #EDBD00;
+    transition: 0.3s;
+}
+
+.catButton:active {
+    background-color: #cba201;
+    transition: 0.3s;
+}
