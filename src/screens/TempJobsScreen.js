@@ -63,7 +63,7 @@ const TempJobsScreen = () => {
           Temporary Jobs
         </h2>
         <h5 style={{ marginLeft: 20, marginTop: -14, paddingRight: 20 }}>
-          Search for individuals that can help you with labor
+          Help an individual to earn some extra cash in exchange for temporary job
         </h5>
         <SearchBarJobs />
       </div>

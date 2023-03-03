@@ -28,7 +28,7 @@ const SearchBarJobs = () => {
           className={styles.searchInput}
         />
         <div>
-        <button className={styles.searchButton}><SearchOutlined style={{fontSize: 18}} /></button>
+        <button className={styles.searchButton}><SearchOutlined style={{fontSize: 18}}/></button>
         </div>
       </div>
       <div className={styles.filterContainer}>
