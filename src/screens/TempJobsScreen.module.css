@@ -1,5 +1,6 @@
 .mainContainer {
     margin-top: 100px;
+    margin-bottom: 120px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,4 +15,19 @@
     border-radius: 10px;
     background-color: #0091FF;
     color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;}
+
+.workersContainer {
+    width: 90%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+    .workersContainer {
+        display: flex;
+        flex-direction: column;
+    }
 }
