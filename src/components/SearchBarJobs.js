@@ -1,5 +1,22 @@
 import React from "react";
 import styles from "./SearchBarJobs.module.css";
+import { SearchOutlined } from "@ant-design/icons";
+
+const dummyCategories = [
+  "Tutoring",
+  "Gardeing",
+  "Housekeeping",
+  "Programming",
+  "Accounting",
+  "Marketing",
+  "Entrepreneurship",
+  "Personal Care",
+  "Cosmetics"
+];
+
+const CatButton = (props) => {
+  return <button className={styles.catButton}>{props.title}</button>;
+};
 
 const SearchBarJobs = () => {
   return (
@@ -10,7 +27,9 @@ const SearchBarJobs = () => {
           placeholder="Search for John Smith, Tutoring"
           className={styles.searchInput}
         />
-        <button className={styles.searchButton}>Search</button>
+        <div>
+        <button className={styles.searchButton}><SearchOutlined style={{fontSize: 18}} /></button>
+        </div>
       </div>
       <div className={styles.filterContainer}>
         {dummyCategories.map((item) => (
