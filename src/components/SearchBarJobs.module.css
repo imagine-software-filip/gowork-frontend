@@ -27,12 +27,12 @@
 }
 
 .searchButton:hover {
-    background-color: #EDBD00;
+    background-color: #bd9700;
     transition: 0.3s;
 }
 
 .searchButton:active {
-    background-color: #cba201;
+    background-color: #bd9700;
     transition: 0.3s;
 }
 
@@ -45,11 +45,11 @@
 }
 
 .catButton:hover {
-    background-color: #EDBD00;
+    background-color: #bd9700;
     transition: 0.3s;
 }
 
 .catButton:active {
-    background-color: #cba201;
+    background-color: #bd9700;
     transition: 0.3s;
 }
