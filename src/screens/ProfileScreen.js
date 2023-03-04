@@ -5,7 +5,7 @@ import styles from "./ProfileScreen.module.css";
 const ProfileScreen = () => {
   return (
     <div className={styles.mainContainer}>
-      <div style={{backgroundColor: "#efefef", width: "90%", textAlign: "center", borderRadius: 10, paddingTop: 20}}>
+      <div className={styles.titleContainer}>
         <img
           src="https://images.pexels.com/photos/2748242/pexels-photo-2748242.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Michael Scott"
