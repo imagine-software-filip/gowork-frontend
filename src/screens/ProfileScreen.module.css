@@ -4,16 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    
-}
-
-.titleContainer {
-    width: 90%;
-    padding: 10px 5px;
-    border-radius: 10px;
-    background-color: #0091FF;
-    color: #fff;
+    align-items: center;    
 }
 
 .userImg {
@@ -21,28 +12,38 @@
     border-radius: 50px;
 }
 
+.titleContainer {
+    background-color: #efefef;
+    width: 90%; 
+    text-align: center; 
+    border-radius: 10px;
+    padding-top: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+
 .settingsContainer {
     background-color: #efefef;
     overflow: hidden;
     border-radius: 10px;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 40px;
     list-style-type:none;
     display:flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .logoutBut {
     border: none;
     width: 90%;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 15px 25px;
     border-radius: 10px;
     color: #ff0033;
     font-size: 16px;
     font-weight: bold;
-
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .setting {
