@@ -21,7 +21,7 @@ const NavBar = () => {
     }, [location.pathname])
 
   return (
-    <footer>
+    <footer style={{zIndex: 9999}}>
           <div className={styles.footerContainer}>
             <div className={styles.tabContainer}>
               <Link to="/" className={styles.linkContainer} style={activeTab === "/" ? {color: colors.primary} : {color: "#fff"} }>
