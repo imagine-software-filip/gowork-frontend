@@ -1,11 +1,14 @@
 import React from "react";
 import { Calendar, Badge } from "antd";
 
+import styles from "./ScheduleCalendar.module.css";
+
 const dummyEvents = [
   {
     year: 2023,
     month: 2,
     day: 10,
+    time: "17:30",
     user: "Filip Dimitrievski",
     service: "Web Design",
   },
@@ -13,6 +16,7 @@ const dummyEvents = [
     year: 2023,
     month: 2,
     day: 10,
+    time: "17:30",
     user: "Filip Dimitrievski",
     service: "Web Design",
   },
@@ -20,6 +24,7 @@ const dummyEvents = [
     year: 2023,
     month: 2,
     day: 10,
+    time: "17:30",
     user: "Filip Dimitrievski",
     service: "Web Design",
   },
@@ -27,6 +32,7 @@ const dummyEvents = [
     year: 2022,
     month: 11,
     day: 12,
+    time: "17:30",
     user: "Nina",
     service: "Web Design",
   },
@@ -34,6 +40,7 @@ const dummyEvents = [
     year: 2021,
     month: 1,
     day: 22,
+    time: "17:30",
     user: "Martin Dimitrievski",
     service: "Web Design",
   },
@@ -41,29 +48,31 @@ const dummyEvents = [
     year: 2020,
     month: 6,
     day: 31,
+    time: "17:30",
     user: "Robert",
     service: "Web Design",
   },
 ];
 
 const DisplayUserOnCal = (props) => {
-  const { user, service } = props;
+  const { user, time } = props;
 
   return (
     <>
-      <Badge color="#f50" /> 
+      <Badge color="#f50" />
       <span> {user}</span>
-      <br/>
-      <span>{service}</span>
-      <br/>
+      <br />
+      <span>{time}</span>
+      <br />
     </>
   );
 };
 
 const ScheduleCalendar = () => {
   return (
-    <div style={{ zIndex: -2 }}>
+    <div className={styles.mainContainer}>
       <Calendar
+        className={styles.calendarContainer}
         dateCellRender={(date) =>
           dummyEvents.map((item) => {
             if (
@@ -71,8 +80,7 @@ const ScheduleCalendar = () => {
               item.month === date.$M &&
               item.year === date.$y
             ) {
-              console.log(date);
-              return <DisplayUserOnCal user={item.user} service={item.service} />;
+              return <DisplayUserOnCal user={item.user} time={item.time} />;
             } else {
               return " ";
             }
