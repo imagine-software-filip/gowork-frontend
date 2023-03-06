@@ -1,18 +1,113 @@
 .mainContainer {
-    margin-top: 100px;
-    margin-bottom: 150px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+  margin-top: 100px;
+  margin-bottom: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scheduleContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  margin-top: 25px;
+}
+
+.calendar {
+    width: 70%;
+}
+
+.sideBar {
+    display: flex; 
+    flex-direction: column; 
+    width: 30%;
 }
 
 .titleContainer {
-    width: 90%;
-    padding: 10px 5px;
-    border-radius: 10px;
-    background-color: #0091FF;
-    color: #fff;
+  width: 90%;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background-color: #0091ff;
+  color: #fff;
+}
+
+.summaryContainer {
+  height: 400px;
+  background-color: #0091ff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.summaryTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.jobsContainer {
+  margin: 10px 20px;
+  color: #fff;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.job {
+  background-color: #0077d2;
+  border-radius: 10px;
+  padding: 1px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.userImg {
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  margin-right: 5px;
+}
+
+.jobDoneTitle {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.jobDoneContainer {
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #edbd00;
+  height: 400px;
+}
+
+.jobsdoneList {
+  margin: 10px 20px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.list {
+  background-color: #c9a100;
+  border-radius: 10px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .calendar {
+        display: none;
+    }
+
+    .sideBar {
+        width: 100%;
+    }
 }
