@@ -3,6 +3,7 @@ import { Button, Form, Input, Alert } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import styles from "./LoginScreen.module.css";
+import networkImg from "../assets/networking.png";
 
 const LoginScreen = () => {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ const LoginScreen = () => {
     <div className={styles.mainContainer}>
       <div className={styles.formContainer}>
         <div className={styles.form}>
-          <h1>Sign In</h1>
+          <h2>Sign In</h2>
           <Form
             name="normal_login"
             className={styles.loginForm}
@@ -56,7 +57,7 @@ const LoginScreen = () => {
               rules={[
                 {
                   required: true,
-                  message: ""
+                  message: "",
                 },
               ]}
             >
@@ -71,7 +72,7 @@ const LoginScreen = () => {
               rules={[
                 {
                   required: true,
-                  message: ""
+                  message: "",
                 },
               ]}
             >
@@ -110,6 +111,35 @@ const LoginScreen = () => {
               />
             )}
           </Form>
+        </div>
+      </div>
+      <div className={styles.sideBarContainer}>
+        <div className={styles.sideBarContent}>
+          <h2>GoWork</h2>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
+            in laying out print, graphic or web designs. The passage is
+            attributed to an unknown typesetter in the 15th century who is
+            thought to have scrambled parts of Cicero's De Finibus Bonorum et
+            Malorum for use in a type specimen book. It usually begins with:{" "}
+          </p>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
+            in laying out print, graphic or web designs. The passage is
+            attributed to an unknown typesetter in the 15th century who is
+            thought to have scrambled parts of Cicero's De Finibus Bonorum et
+            Malorum for use in a type specimen book. It usually begins with:{" "}
+          </p>
+          <p>
+            Lorem ipsum, or lipsum as it is sometimes known, is dummy text used
+            in laying out print, graphic or web designs. The passage is
+            attributed to an unknown typesetter in the 15th century who is
+            thought to have scrambled parts of Cicero's De Finibus Bonorum et
+            Malorum for use in a type specimen book. It usually begins with:{" "}
+          </p>
+        </div>
+        <div style={{textAlign: "center"}}>
+        <img src={networkImg} alt="Freelancing" width="23%" />
         </div>
       </div>
     </div>
