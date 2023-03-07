@@ -58,8 +58,6 @@ const ScheduleJobCard = (props) => {
 };
 
 const RateWorkerCard = (props) => {
-  const { name } = props;
-
   return (
     <div className={styles.list}>
       <img
