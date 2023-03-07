@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Button, Form, Input, Alert } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import styles from "./LoginScreen.module.css";
 
 const LoginScreen = () => {
-  const [activeAlert, setActiveAlert] = useState(false);  
-  const [alert, setAlert] = useState({type: "", desc: "", msg: ""});
+  const navigate = useNavigate();
+  const [activeAlert, setActiveAlert] = useState(false);
+  const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
 
   const AlertCard = () => {
     return (
@@ -21,20 +22,19 @@ const LoginScreen = () => {
   };
 
   const onFinish = (values) => {
-    localStorage.setItem("authToken", "");
-    console.log()
     if (values) {
-      console.log("Received values of form: ", values);
-      localStorage.setItem("authToken", "asdas");
-    }
-
-    if (localStorage.getItem("authToken") !== "") {
+      if (values.username === "tempuser" && values.password === "P@ss123") {
+        localStorage.setItem("authToken", values.username);
+        navigate("/");
+        window.location.reload();
+      } else {
         setAlert({
-            type: 'error',
-            desc: 'User with the provided info does not exists',
-            msg: 'Failed'
+          type: "error",
+          desc: "User with the provided info does not exists",
+          msg: "Failed",
         });
         setActiveAlert(true);
+      }
     }
   };
 
@@ -56,13 +56,14 @@ const LoginScreen = () => {
               rules={[
                 {
                   required: true,
-                  message: "Please input your Username!",
+                  message: ""
                 },
               ]}
             >
               <Input
                 prefix={<UserOutlined className="site-form-item-icon" />}
                 placeholder="Username"
+                size="large"
               />
             </Form.Item>
             <Form.Item
@@ -70,7 +71,7 @@ const LoginScreen = () => {
               rules={[
                 {
                   required: true,
-                  message: "Please input your Password!",
+                  message: ""
                 },
               ]}
             >
@@ -78,6 +79,7 @@ const LoginScreen = () => {
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
                 placeholder="Password"
+                size="large"
               />
             </Form.Item>
             <Form.Item>
@@ -90,6 +92,7 @@ const LoginScreen = () => {
               <Button
                 type="primary"
                 htmlType="submit"
+                size="large"
                 className={styles.loginFormButton}
               >
                 Log in
@@ -99,7 +102,13 @@ const LoginScreen = () => {
                 register now!
               </Link>
             </Form.Item>
-            {activeAlert && <AlertCard msg="Congrats!" type="error" desc="Lorem ipsun lorem ipuss asd  a" />}
+            {activeAlert && (
+              <AlertCard
+                msg="Congrats!"
+                type="error"
+                desc="Lorem ipsun lorem ipuss asd  a"
+              />
+            )}
           </Form>
         </div>
       </div>
