@@ -65,4 +65,8 @@
     .setting {
         text-align: left;
     }
+
+    .mainContainer {
+        margin-bottom: 100px;
+    }
   }

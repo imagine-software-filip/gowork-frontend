@@ -138,8 +138,13 @@ const LoginScreen = () => {
             Malorum for use in a type specimen book. It usually begins with:{" "}
           </p>
         </div>
-        <div style={{textAlign: "center"}}>
-        <img src={networkImg} alt="Freelancing" width="23%" />
+        <div style={{ textAlign: "center" }}>
+          <img
+            src={networkImg}
+            alt="Freelancing"
+            width="20%"
+            style={{ marginBottom: 30 }}
+          />
         </div>
       </div>
     </div>
