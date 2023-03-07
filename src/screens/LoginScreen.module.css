@@ -6,13 +6,25 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    gap: 2%;
 }
 
 .formContainer {
     background-color: #bfe2fd;
     color: #000;
     border-radius: 10px;
-    width: 90%;
+    width: 24%;
+}
+
+.sideBarContainer {
+    width: 64%;
+    background-color: #fceba6;
+    border-radius: 10px;
+}
+
+.sideBarContent {
+    margin: 20px; 
+    text-align: justify
 }
 
 .form {
@@ -24,7 +36,7 @@
 }
 
 .loginForm {
-    width: 500px;
+    min-width: 200px;
 }
 
 .loginFormForgot {
@@ -57,9 +69,18 @@
     transition: 0.2s;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
     .loginForm {
         width: 300px;
+    }
+    .mainContainer {
+        margin-top: 320px;
+        margin-bottom: 200px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .formContainer, .sideBarContainer {
+        width: 90%;
     }
     
 }
