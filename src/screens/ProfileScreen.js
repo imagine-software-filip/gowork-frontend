@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import styles from "./ProfileScreen.module.css";
 
 const ProfileScreen = () => {
+  const logOutHandler = () => {
+    localStorage.clear();
+    window.location.reload();
+  }
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.titleContainer}>
@@ -30,7 +35,7 @@ const ProfileScreen = () => {
           About
         </Link>
       </div>
-      <button className={styles.logoutBut}>Log Out</button>
+      <button className={styles.logoutBut} onClick={logOutHandler}>Log Out</button>
     </div>
   );
 };
