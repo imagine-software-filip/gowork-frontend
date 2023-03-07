@@ -8,6 +8,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 
 import NavBar from "./components/UI/NavBar";
 import Header from "./components/UI/Header";
+import LoginScreen from "./screens/LoginScreen";
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/login" element={<LoginScreen />} />
+
           <Route path="/" element={<HomeScreen />} />
           <Route path="/tempjobs" element={<TempJobsScreen />} />
           <Route path="/events" element={<EventScreen />} />
