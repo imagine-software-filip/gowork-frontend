@@ -1,3 +1,9 @@
+.vStack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .mainContainer {
     margin-top: 120px;
     border-radius: 10px;
@@ -74,13 +80,17 @@
         width: 300px;
     }
     .mainContainer {
-        margin-top: 320px;
-        margin-bottom: 200px;
+        margin-top: 400px;
         flex-direction: column;
         align-items: center;
     }
     .formContainer, .sideBarContainer {
         width: 90%;
+    }
+
+    .vStack {
+        display: flex;
+        flex-direction: column;
     }
     
 }
