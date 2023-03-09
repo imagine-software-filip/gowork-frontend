@@ -2,13 +2,20 @@ import React, { useState } from "react";
 import { Button, Form, Input, Alert } from "antd";
 import { Link, useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { useMutation } from "@apollo/client";
+
 import styles from "./LoginScreen.module.css";
 import networkImg from "../assets/networking.png";
+
+import { LOGIN_USER } from "../GraphQL/mutations";
+
 
 const LoginScreen = () => {
   const navigate = useNavigate();
   const [activeAlert, setActiveAlert] = useState(false);
+  const [loginUser] = useMutation(LOGIN_USER);
   const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
+  
 
   const AlertCard = () => {
     return (
@@ -22,21 +29,20 @@ const LoginScreen = () => {
     );
   };
 
+
   const onFinish = (values) => {
-    if (values) {
-      if (values.username === "tempuser" && values.password === "P@ss123") {
-        localStorage.setItem("authToken", values.username);
-        navigate("/");
-        window.location.reload();
-      } else {
-        setAlert({
-          type: "error",
-          desc: "User with the provided info does not exists",
-          msg: "Failed",
-        });
-        setActiveAlert(true);
-      }
-    }
+    loginUser({ variables: { email: values.username, password: values.password } })
+    .then((res) => {
+      console.log(res.data.tokenAuth.token)
+      localStorage.setItem("authToken", res.data.tokenAuth.token)
+      navigate("../", { replace: true });
+      window.location.reload();
+    })
+    .catch((err) => {
+      setActiveAlert(true);
+      setAlert({error: "error", desc: "Credentials incorrect", msg: "Error"})
+      console.log(err);
+    });
   };
 
   return (
