@@ -15,6 +15,7 @@ const Header = () => {
           />
           <h2>GoWork</h2>
         </div>
+        <h3 style={{marginRight: 20}}>Beta</h3>
       </div>
     </header>
   );
