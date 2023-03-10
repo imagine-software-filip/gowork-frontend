@@ -4,31 +4,32 @@ import { Link, useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useMutation } from "@apollo/client";
 import styles from "./LoginForm.module.css";
-import { LOGIN_USER } from "../../GraphQL/Mutations";
+// import { LOGIN_USER } from "../../GraphQL/Mutations";
 
 const LoginForm = () => {
   const navigate = useNavigate();
   const [activeAlert, setActiveAlert] = useState(false);
-  const [loginUser] = useMutation(LOGIN_USER);
+  // const [loginUser] = useMutation(LOGIN_USER);
   const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
 
   const onFinish = (values) => {
-    loginUser({
-      variables: { email: values.username, password: values.password },
-    })
-      .then((res) => {
-        localStorage.setItem("authToken", res.data.tokenAuth.token);
-        navigate("../", { replace: true });
-        window.location.reload();
-      })
-      .catch((err) => {
-        setActiveAlert(true);
-        setAlert({
-          error: "error",
-          desc: "Credentials incorrect",
-          msg: "Error",
-        });
-      });
+    // loginUser({
+    //   variables: { email: values.username, password: values.password },
+    // })
+    //   .then((res) => {
+    //     localStorage.setItem("authToken", res.data.tokenAuth.token);
+    //     navigate("../", { replace: true });
+    //     window.location.reload();
+    //   })
+    //   .catch((err) => {
+    //     setActiveAlert(true);
+    //     setAlert({
+    //       error: "error",
+    //       desc: "Credentials incorrect",
+    //       msg: "Error",
+    //     });
+    //   });
+    console.log("Test")
   };
 
   const AlertCard = () => {
