@@ -1,37 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Form, Input, Alert } from "antd";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-// import { useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import styles from "./LoginForm.module.css";
-// import { LOGIN_USER } from "../../GraphQL/Mutations";
+import { LOGIN_USER } from "../../graphql/mutations";
 
 const LoginForm = () => {
-  // const navigate = useNavigate();
-  // const [activeAlert, setActiveAlert] = useState(false);
-  // const [loginUser] = useMutation(LOGIN_USER);
-  // const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
-  const alert="Error";
-  const activeAlert = true;
+  const navigate = useNavigate();
+  const [activeAlert, setActiveAlert] = useState(false);
+  const [loginUser] = useMutation(LOGIN_USER);
+  const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
 
   const onFinish = (values) => {
-    // loginUser({
-    //   variables: { email: values.username, password: values.password },
-    // })
-    //   .then((res) => {
-    //     localStorage.setItem("authToken", res.data.tokenAuth.token);
-    //     navigate("../", { replace: true });
-    //     window.location.reload();
-    //   })
-    //   .catch((err) => {
-    //     setActiveAlert(true);
-    //     setAlert({
-    //       error: "error",
-    //       desc: "Credentials incorrect",
-    //       msg: "Error",
-    //     });
-    //   });
-    console.log("Uncomment me")
+    loginUser({
+      variables: { email: values.username, password: values.password },
+    })
+      .then((res) => {
+        localStorage.setItem("authToken", res.data.tokenAuth.token);
+        navigate("../", { replace: true });
+        window.location.reload();
+      })
+      .catch((err) => {
+        setActiveAlert(true);
+        setAlert({
+          error: "error",
+          desc: "Credentials incorrect",
+          msg: "Error",
+        });
+      });
   };
 
   const AlertCard = () => {
