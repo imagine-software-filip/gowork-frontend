@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./ProfileScreen.module.css";
+
+const Button = (props) => {
+  return <button className={styles.settingButton} onClick={props.onClick}>{props.name}</button>;
+}
 
 const ProfileScreen = () => {
   const logOutHandler = () => {
     localStorage.clear();
     window.location.reload();
-  }
+  };
 
   return (
     <div className={styles.mainContainer}>
@@ -18,24 +21,14 @@ const ProfileScreen = () => {
         />
         <h2 className={styles.userName}>Linda Decer</h2>
       </div>
-      <div className={styles.settingsContainer}>
-        <Link to="/" className={styles.setting}>
-           Preferences
-        </Link>
-        <div style={{ height: 1, backgroundColor: "#c8c8c8" }}></div>
-        <Link to="/" className={styles.setting}>
-           Services
-        </Link>
-        <div style={{ height: 1, backgroundColor: "#c8c8c8" }}></div>
-        <Link to="/" className={styles.setting}>
-           Profile
-        </Link>
-        <div style={{ height: 1, backgroundColor: "#c8c8c8" }}></div>
-        <Link to="/" className={styles.setting}>
-          About
-        </Link>
+      <div className={styles.optionsGrid}>
+        <div className={styles.div1}><Button name="Jobs" /></div>
+        <div className={styles.div2}><Button name="About" /></div>
+        <div className={styles.div3}><Button name="Info" /></div>
+        <div className={styles.div4}><Button name="Profile" /></div>
+        <div className={styles.div5}><Button name="Freelancing" /></div>
+        <div className={styles.div6}><Button name="Log Out" onClick={logOutHandler}/></div>
       </div>
-      <button className={styles.logoutBut} onClick={logOutHandler}>Log Out</button>
     </div>
   );
 };
