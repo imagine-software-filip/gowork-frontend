@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { Input } from "antd";
-import { VERIFY_USER } from '../../GraphQL/mutations'
+import { VERIFY_USER } from "./../../GraphQL/Mutations"
 
 import styles from "./VerifyUser.module.css";
 
