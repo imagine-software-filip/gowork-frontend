@@ -2,7 +2,7 @@ import React from "react";
 import { Spin } from "antd";
 import { useQuery } from "@apollo/client";
 import { Navigate, useLocation } from "react-router-dom";
-import { CHECK_LOGIN } from "../../GraphQL/Queries";
+import { CHECK_LOGIN } from "../../GraphQL/queries";
 
 import styles from "./RequireAuth.module.css";
 import VerifyUser from "./VerifyUser";
