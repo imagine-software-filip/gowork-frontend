@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { Input } from "antd";
-import { VERIFY_USER } from '../../GraphQL/Mutations'
+import { VERIFY_USER } from "../../graphql/mutations";
 
 import styles from "./VerifyUser.module.css";
 
@@ -23,7 +23,7 @@ const VerifyUser = () => {
     }
   };
 
-  const onFinish = (event) => {
+  const onFinish = () => {
     verify_login({
       variables: { userId: user_id, verifyCode: verToken },
     })
