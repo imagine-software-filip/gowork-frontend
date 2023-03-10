@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useMutation } from "@apollo/client";
+// import { useMutation } from "@apollo/client";
 import { Input } from "antd";
-import { VERIFY_USER } from "./../../GraphQL/Mutations"
+// import { VERIFY_USER } from "../../GraphQL/Mutations"
 
 import styles from "./VerifyUser.module.css";
 
 const VerifyUser = () => {
-  const user_id = localStorage.getItem("user-id");
-  const navigate = useNavigate();
-  const [verify_login] = useMutation(VERIFY_USER);
+  // const user_id = localStorage.getItem("user-id");
+  // const navigate = useNavigate();
+  // const [verify_login] = useMutation(VERIFY_USER);
   const [verToken, setVerToken] = useState("");
   const logOut = () => {
     localStorage.clear();
@@ -24,16 +24,17 @@ const VerifyUser = () => {
   };
 
   const onFinish = () => {
-    verify_login({
-      variables: { userId: user_id, verifyCode: verToken },
-    })
-      .then((res) => {
-        navigate("../", { replace: true });
-        window.location.reload();
-      })
-      .catch((err) => {
-        console.log(err)
-      });
+    // verify_login({
+    //   variables: { userId: user_id, verifyCode: verToken },
+    // })
+    //   .then((res) => {
+    //     navigate("../", { replace: true });
+    //     window.location.reload();
+    //   })
+    //   .catch((err) => {
+    //     console.log(err)
+    //   });
+    console.log("Uncomment me");
   };
 
   return (

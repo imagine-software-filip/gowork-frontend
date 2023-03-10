@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Form, Input, Alert } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { useMutation } from "@apollo/client";
+// import { useMutation } from "@apollo/client";
 import styles from "./LoginForm.module.css";
 // import { LOGIN_USER } from "../../GraphQL/Mutations";
 
 const LoginForm = () => {
-  const navigate = useNavigate();
-  const [activeAlert, setActiveAlert] = useState(false);
+  // const navigate = useNavigate();
+  // const [activeAlert, setActiveAlert] = useState(false);
   // const [loginUser] = useMutation(LOGIN_USER);
-  const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
+  // const [alert, setAlert] = useState({ type: "", desc: "", msg: "" });
+  const alert="Error";
+  const activeAlert = true;
 
   const onFinish = (values) => {
     // loginUser({
@@ -29,7 +31,7 @@ const LoginForm = () => {
     //       msg: "Error",
     //     });
     //   });
-    console.log("Test")
+    console.log("Uncomment me")
   };
 
   const AlertCard = () => {
