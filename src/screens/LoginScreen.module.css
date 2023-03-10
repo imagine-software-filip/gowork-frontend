@@ -15,13 +15,6 @@
     gap: 2%;
 }
 
-.formContainer {
-    background-color: #bfe2fd;
-    color: #000;
-    border-radius: 10px;
-    width: 24%;
-}
-
 .sideBarContainer {
     width: 64%;
     background-color: #fceba6;
@@ -31,14 +24,6 @@
 .sideBarContent {
     margin: 20px; 
     text-align: justify
-}
-
-.form {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
 }
 
 .loginForm {
@@ -80,7 +65,7 @@
         width: 300px;
     }
     .mainContainer {
-        margin-top: 400px;
+        margin-top: 425px;
         flex-direction: column;
         align-items: center;
     }
