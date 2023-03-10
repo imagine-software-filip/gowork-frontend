@@ -41,7 +41,7 @@ const dummyWorkers = [
 
 const ScheduleJobCard = (props) => {
   const { img, name, date, time } = props;
-
+  
   return (
     <>
       <div className={styles.job}>
@@ -76,9 +76,6 @@ const RateWorkerCard = (props) => {
 const HomeScreen = () => {
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.titleContainer}>
-        <h2 style={{ marginLeft: 20 }}>Welcome back, Andrew</h2>
-      </div>
       <div className={styles.scheduleContainer}>
         <div className={styles.calendar}>
           <ScheduleCalendar />
@@ -89,6 +86,7 @@ const HomeScreen = () => {
             <div className={styles.jobsContainer}>
               {dummyWorkers.map((item) => (
                 <ScheduleJobCard
+                  key={item.name}
                   img={item.img}
                   name={item.name}
                   date={item.date}
@@ -102,6 +100,7 @@ const HomeScreen = () => {
             <div className={styles.jobsdoneList}>
             {dummyWorkers.map((item) => (
                 <RateWorkerCard
+                  key={item.name}
                   img={item.img}
                   name={item.name}
                 />

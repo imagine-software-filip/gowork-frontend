@@ -4,7 +4,7 @@ import logo from "../../assets/logo.png";
 
 const Header = () => {
   return (
-    <header style={{zIndex: 9999}}>
+    <header style={{zIndex: 10}}>
       <div className={styles.headerContainer}>
         <div className={styles.brandCointainer}>
           <img
