@@ -23,7 +23,7 @@ const VerifyUser = () => {
     }
   };
 
-  const onFinish = (event) => {
+  const onFinish = () => {
     verify_login({
       variables: { userId: user_id, verifyCode: verToken },
     })
