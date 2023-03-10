@@ -5,7 +5,7 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useMutation } from "@apollo/client";
 import styles from "./LoginForm.module.css";
 
-import { LOGIN_USER } from "../../GraphQL/Mutations";
+import { LOGIN_USER } from '../../GraphQL/Mutations';
 
 const LoginForm = () => {
   const navigate = useNavigate();
