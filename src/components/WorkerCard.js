@@ -1,14 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./WorkerCard.module.css";
 import colors from "../constants/colors";
 
 const WorkerCard = (props) => {
     const { img, name, occupation, desc, date, location, type } = props;
+    const navigate = useNavigate();
 
     const color = type === "t" ? colors.accent : colors.primary;
 
+    const test = () => {
+      navigate("../userdetail", { replace: true });
+    }
+
   return (
-    <div className={styles.mainVContainer} style={{borderTop: `12px solid ${color}`}}>
+    <div className={styles.mainVContainer} style={{borderTop: `12px solid ${color}`}} onClick={test}>
       <div className={styles.headerHContainer}>
         <img
           src={img}
