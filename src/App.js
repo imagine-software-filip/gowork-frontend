@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RequireAuth from "./components/System/RequireAuth";
 import HomeScreen from "./screens/HomeScreen";
 import TempJobsScreen from "./screens/TempJobsScreen";
@@ -15,7 +10,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import NavBar from "./components/UI/NavBar";
 import Header from "./components/UI/Header";
 import LoginScreen from "./screens/LoginScreen";
-
+import DetailPage from "./screens/DetailPage";
 
 const App = () => {
   const user = localStorage.getItem("authToken");
@@ -63,6 +58,14 @@ const App = () => {
             element={
               <RequireAuth user={user}>
                 <ProfileScreen />
+              </RequireAuth>
+            }
+          />
+          <Route
+            path="/userdetail"
+            element={
+              <RequireAuth user={user}>
+                <DetailPage />
               </RequireAuth>
             }
           />

@@ -9,3 +9,19 @@ export const CHECK_LOGIN = gql`
         }
     }
 `;
+
+export const LIST_JOBS = gql`
+    query jobs($token: String!) {
+        jobs(token: $token) {
+            id
+            title
+            desc
+            price
+            endRangeAvailability
+            user {
+                firstName
+                lastName
+            }
+        }
+    }
+`;
