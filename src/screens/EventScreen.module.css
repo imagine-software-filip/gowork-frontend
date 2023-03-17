@@ -25,13 +25,28 @@
     float: left;
     margin-left: 54px;
     margin-right: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
 }
 
 
 @media screen and (max-width: 1300px) {
+/*Screen that are bigger than 1300px in width will have the full experience (3 cards per row)*/
+/*Tablets will have two cards per row*/
     .eventsContainer {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 60px;
     }
+}
+
+/*Phone will have one card per row*/
+@media screen and (max-width: 720px) {
+  .eventsContainer {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+  }
 }
