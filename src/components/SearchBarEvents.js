@@ -1,30 +1,26 @@
 import React from "react";
-import styles from "./SearchBarJobs.module.css";
+import styles from "./SearchBarEvents.module.css";
 import { SearchOutlined } from "@ant-design/icons";
 
 const dummyCategories = [
-  "Tutoring",
-  "Gardening",
-  "Housekeeping",
-  "Programming",
-  "Accounting",
-  "Marketing",
-  "Entrepreneurship",
-  "Personal Care",
-  "Cosmetics"
+  "Industry",
+  "Date",
+  "Time",
+  "Medium",
+  "Employer",
 ];
 
 const CatButton = (props) => {
   return <button className={styles.catButton}>{props.title}</button>;
 };
 
-const SearchBarJobs = () => {
+const SearchBarEvents = () => {
   return (
     <>
       <div className={styles.searchBarContainer}>
         <input
           type="text"
-          placeholder="Search for John Smith, Tutoring"
+          placeholder="Search for an event, Employer"
           className={styles.searchInput}
         />
         <div>
@@ -40,4 +36,4 @@ const SearchBarJobs = () => {
   );
 };
 
-export default SearchBarJobs;
+export default SearchBarEvents;
