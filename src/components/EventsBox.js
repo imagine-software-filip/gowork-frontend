@@ -3,7 +3,7 @@ import styles from "./EventsBox.module.css";
 import colors from "../constants/colors";
 
 const EventsBox = (props) => {
-    const { img, name, occupation, desc, date, location, type } = props;
+    const { img, eventname, industry, desc, date, location, type } = props;
 
     const color = type === "t" ? colors.accent : colors.primary;
 
@@ -12,12 +12,12 @@ const EventsBox = (props) => {
       <div className={styles.headerHContainer}>
         <img
           src={img}
-          alt={name}
+          alt={eventname}
           className={styles.eventsImg}
         />
         <div className={styles.headerVText}>
-          <p style={{fontSize: 18}}>{name}</p>
-          <p style={{marginTop: -14, fontSize: 12}}>{occupation}</p>
+          <p style={{fontSize: 18}}>{eventname}</p>
+          <p style={{marginTop: -14, fontSize: 12}}>{industry}</p>
         </div>
       </div>
       <div className={styles.bodyContainer}>
@@ -26,8 +26,11 @@ const EventsBox = (props) => {
         </p>
       </div>
       <div className={styles.dateContainer}>
-        <span>{location}</span>
-        <span>Posted on {date}</span>
+        <span>Location: {location}</span>
+        <span>Held On: {date}</span>
+      </div>
+      <div className= {styles.joinButton}>
+       <button className={styles.joinButton}>JOIN</button>
       </div>
     </div>
   );

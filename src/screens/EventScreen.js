@@ -5,53 +5,29 @@ import EventsBox from "../components/EventsBox";
 
 const dummyEvents = [
   {
-    img: "https://images.pexels.com/photos/1317712/pexels-photo-1317712.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Michael Scott",
-    occupation: "Photography",
-    desc: "With 3 years of experience, I offer top-quality work that exceeds expectations. Let me bring your project to life.",
+    img: "https://t3.ftcdn.net/jpg/03/82/25/90/360_F_382259080_rJJ6elKCfhJpaVTwIhXsaiy6JhhsmpDT.jpg",
+    eventname: "Meet 'N' Greet with Barbers",
+    industry: "Hairdressers",
+    desc: "Get to know your favorite barbers and learn how to wield the scissors like a pro. Found out avenues for growth in the hairdressers business. All ages are welcome to join. ",
     date: "2022-01-02",
     location: "East Lansing, MI"
   },
   {
-    img: "https://images.pexels.com/photos/13452647/pexels-photo-13452647.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Jake Peralta",
-    occupation: "Software",
-    desc: "As a creative problem-solver with expertise in programming, I am ready to tackle any challenge you throw my way.",
+    img: "https://img.freepik.com/premium-vector/pizza-logo-design-template_15146-192.jpg?w=2000",
+    eventname: "Pizza Party",
+    industry: "Fast Food Workers",
+    desc: "Join the XYZ Pizza Chain for a casual team pizza party! It's a great chance to build team dynamics, catch up with your colleagues, and enjoy some great food. Open to all workers in XYZ Pizza Corp.",
     date: "2023-03-01",
     location: "Detroit, MI"
   },
   {
-    img: "https://images.pexels.com/photos/1937434/pexels-photo-1937434.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Pam Besley",
-    occupation: "Graphic Design",
-    desc: "Passionate about design, I bring a unique perspective and skill set to every project I work on. Let's collaborate!",
+    img: "https://images-platform.99static.com//dSQhzTpWXDcpuu9Y2xEpXV84QMg=/129x129:992x992/fit-in/500x500/99designs-contests-attachments/118/118295/attachment_118295052",
+    eventname: "Code and Chat",
+    industry: "Programmers",
+    desc: "Passionate about coding, and looking for a place to code anc chat with fellow programmers? Look no further. Code Flix Inc. is organizing a social event for its interns, new recruits, and all other programmers in the locality.",
     date: "2022-12-25",
     location: "Chicago, IL"
   },
-  {
-    img: "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Jeff Winger",
-    occupation: "Finance",
-    desc: "With a focus on meeting clients' needs, I am a skilled finance freelancer who takes pride in delivering exceptional results.",
-    date: "2022-10-12",
-    location: "New York City, NY"
-  },
-  {
-    img: "https://images.pexels.com/photos/3823495/pexels-photo-3823495.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Vladimir Kavinsky",
-    occupation: "Personal Chef",
-    desc: "From start to finish, I will go above and beyond to ensure your project is a success. Let me put my proven track record to work for you.",
-    date: "2023-01-01",
-    location: "Las Vegas, NV"
-  },
-  {
-    img: "https://images.pexels.com/photos/1520760/pexels-photo-1520760.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Daft Punk",
-    occupation: "Mucisian",
-    desc: "As a talented freelancer with exceptional attention to detail and communication skills, I am committed to delivering work that exceeds your expectations. Let's get started!",
-    date: "2021-01-09",
-    location: "San Diego, CA"
-  }
 ]
 
 const EventScreen = () => {
@@ -67,9 +43,9 @@ const EventScreen = () => {
         <SearchBarEvents />
       </div>
       <div className={styles.eventsContainer}>
-        {dummyEvents.map(item => <EventsBox img={item.img} name={item.name} occupation={item.occupation} desc={item.desc} date={item.date} location={item.location} />)}
-        {dummyEvents.map(item => <EventsBox img={item.img} name={item.name} occupation={item.occupation} desc={item.desc} date={item.date} location={item.location} />)}
-        {dummyEvents.map(item => <EventsBox img={item.img} name={item.name} occupation={item.occupation} desc={item.desc} date={item.date} location={item.location} />)}
+        {dummyEvents.map(item => <EventsBox img={item.img} eventname={item.eventname} industry={item.industry} desc={item.desc} date={item.date} location={item.location} />)}
+        {dummyEvents.map(item => <EventsBox img={item.img} eventname={item.eventname} industry={item.industry} desc={item.desc} date={item.date} location={item.location} />)}
+        {dummyEvents.map(item => <EventsBox img={item.img} eventname={item.eventname} industry={item.industry} desc={item.desc} date={item.date} location={item.location} />)}
       </div>
     </div>
   );
