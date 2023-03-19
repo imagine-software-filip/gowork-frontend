@@ -19,7 +19,7 @@ const ProfileScreen = () => {
           alt="Michael Scott"
           className={styles.userImg}
         />
-        <h2 className={styles.userName}>Linda Decer</h2>
+        <h2 className={styles.userName}>Chloe Decer</h2>
       </div>
       <div className={styles.optionsGrid}>
         <div className={styles.div1}><Button name="Jobs" /></div>
