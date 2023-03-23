@@ -5,6 +5,8 @@ import SearchBarJobs from "../components/SearchBarJobs";
 import WorkerCard from "../components/WorkerCard";
 import { LIST_JOBS } from "../graphql/queries";
 
+import andrew from "../assets/andrew.jpeg"
+
 const dummyWorkers = [
   {
     img: "https://images.pexels.com/photos/1317712/pexels-photo-1317712.jpeg?auto=compress&cs=tinysrgb&w=1600",
@@ -13,16 +15,16 @@ const dummyWorkers = [
     opening: "Welcome to my freelance portfolio",
     desc: "With 3 years of experience, I offer top-quality work that exceeds expectations. Let me bring your project to life.",
     date: "2022-01-02",
-    location: "East Lansing, MI"
+    location: "Saginaw, MI"
   },
   {
-    img: "https://images.pexels.com/photos/13452647/pexels-photo-13452647.jpeg?auto=compress&cs=tinysrgb&w=1600",
-    name: "Jake Peralta",
-    occupation: "Software",
-    opening: "Let's create something amazing together",
-    desc: "As a creative problem-solver with expertise in programming, I am ready to tackle any challenge you throw my way.",
+    img: andrew,
+    name: "Andrew Gladki",
+    occupation: "entreprenour",
+    opening: "I have been coaching for over 3 years and cleaning gutters for 2",
+    desc: "I have been coaching for over 3 years and cleaning gutters for 2",
     date: "2023-03-01",
-    location: "Detroit, MI"
+    location: "Saginaw, MI"
   },
   {
     img: "https://images.pexels.com/photos/1937434/pexels-photo-1937434.jpeg?auto=compress&cs=tinysrgb&w=1600",

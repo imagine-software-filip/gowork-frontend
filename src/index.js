@@ -15,7 +15,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
   if (graphQLErrors) {
     // eslint-disable-next-line 
     graphQLErrors.map(({ message, path }) => {
-      alert(`GraphQL error: ${message}`);
+      console.log(`GraphQL error: ${message}`);
     });
   }
 });
