@@ -8,6 +8,7 @@
   padding: 10px;
   border-radius: 10px;
   margin-top: 20px;
+  opacity: 0.96;
 }
 
 .headerHContainer {
@@ -28,9 +29,8 @@
 }
 
 .bodyContainer {
-    max-height: 120px;
-    overflow-y: scroll;
-    max-height: 100px;
+    overflow-y: scroll; 
+    height: 80px;
 }
 
 .dateContainer {

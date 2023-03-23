@@ -18,6 +18,7 @@ const LoginForm = () => {
       variables: { email: values.username, password: values.password },
     })
       .then((res) => {
+        setActiveAlert(false);
         localStorage.setItem("authToken", res.data.tokenAuth.token);
         navigate("../", { replace: true });
         window.location.reload();
