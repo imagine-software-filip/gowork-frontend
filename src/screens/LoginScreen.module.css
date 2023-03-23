@@ -8,7 +8,7 @@
     margin-top: 120px;
     border-radius: 10px;
     width: 100%;
-    height: 60vh;
+    min-height: 40vh;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -58,24 +58,4 @@
 .loginFormButton:active {
     color: #000 !important;
     transition: 0.2s;
-}
-
-@media screen and (max-width: 850px) {
-    .loginForm {
-        width: 300px;
-    }
-    .mainContainer {
-        margin-top: 425px;
-        flex-direction: column;
-        align-items: center;
-    }
-    .formContainer, .sideBarContainer {
-        width: 90%;
-    }
-
-    .vStack {
-        display: flex;
-        flex-direction: column;
-    }
-    
 }
