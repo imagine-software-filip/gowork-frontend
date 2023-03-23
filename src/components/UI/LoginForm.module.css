@@ -1,8 +1,21 @@
+.headingContainerOnForm {
+    background-image: linear-gradient(90deg, #348bee, #0c5bb5, #0f4889);
+    background-clip: text;
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+    font-weight: 400;
+    font-size: 30px;
+}
+
 .formContainer {
-    background-color: #bfe2fd;
-    color: #000;
+    background-color: #f0f0f0;
+    opacity: 0.9;
     border-radius: 10px;
     width: 24%;
+    overflow: hidden;
+    width: 100%;
 }
 
 .form {
@@ -10,17 +23,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    overflow: hidden;
 }
 
-/* .loginForm {
-    min-width: 200px;
-} */
+.loginForm {
+    width: 300px;
+}
 
 .loginFormForgot {
     float: left;
     margin-top: -30px;
     font-weight: bold;
+    color: #EDBD00;
 }
 
 .loginFormForgot {
@@ -35,6 +49,7 @@
 
 .registerNowButt {
     font-weight: bold;
+    color: #EDBD00;
 }
 
 .loginFormButton:hover {
@@ -49,6 +64,6 @@
 
 @media screen and (max-width: 850px) {
     .formContainer {
-        width: 90%;
+        width: 100%;
     }    
 }
